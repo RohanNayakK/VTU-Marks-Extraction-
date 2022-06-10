@@ -1,6 +1,6 @@
 import requests
 
-def fetchData(usn,sem):
+def fetchData(usn,sem,examType):
     querryString ="https://api.vtuconnect.in/result/"+ usn +"/"+"FEBRUARY%2FMARCH%202022"+"/"+sem
     print(querryString)
     r=requests.get(querryString ,

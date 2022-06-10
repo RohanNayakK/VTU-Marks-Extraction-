@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+    <link href="./styles.css" rel="stylesheet">
+    <title>VTU Results2Excel Tool </title>
+  </head>
+  <body>
+    <div id="mainNav" class="navBar">
+      <p id="appName">VTU Results2Excel Tool</p>
+    </div>
+
+    <div class="MainContent">
+      <img alt="VTU" src="assets/vtuLogo.png" />
+
+      <form id="detailsForm">
+        <fieldset id="detailsFormFieldSet">
+          <legend>Fill College/Class Details</legend>
+          <div  class="inputWrapper">
+            <label class="flabel" for="collegeCode">College Code :</label>
+            <input id="collegeCodeInput" required placeholder="Enter college code" name="collegeCode" type="text" maxlength="3" />
+          </div>
+
+          <div class="inputWrapper">
+            <label class="flabel" for="year">Year :</label>
+            <input required placeholder="Enter year" name="year" type="number" />
+          </div>
+          
+          <div class="inputWrapper">
+            <label class="flabel" for="branch">Branch :</label>
+            <input required placeholder="Enter branch code" name="branch" type="text" />
+          </div>
+  
+        <div class="centreWrapper">
+          <button type="reset" class="resetbtn">Reset</button>
+          <button class="subBtn">Submit</button>
+        </div>
+        </fieldset>
+     
+
+      
+        <fieldset id="detailsForm2">
+          <legend >Select required exam</legend>
+          <div  class="inputWrapper">
+            <label class="flabel">Select the Exam / Sem </label>
+           <select>
+             <option>1</option>
+             <option>2</option>
+             <option>3</option>
+
+
+
+           </select>
+          </div>
+
+        <div class="centreWrapper">
+          <button id="cancelBtn" class="resetbtn">Cancel</button>
+          <button class="subBtn">Generate Excel</button>
+        </div>
+        </fieldset>
+      </form>
+    </div>
+
+    <script src="./renderer.js"></script>
+  </body>
+</html>

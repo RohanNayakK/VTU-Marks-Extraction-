@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #3a3a3a;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+
+
+.navBar{
+    display: flex;
+    width: 100vw;
+    height: 10vh;
+ 
+    font-size: x-large;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+#vtuLogo{
+    height: 100%;
+}
+
+#mainNav{
+    background: white;
+}
+
+.MainContent{
+    display: flex;
+    position: absolute;
+    top:10vh;
+    width: 100vw;
+    height: 90vh;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    gap:5vh;
+
+}
+
+
+
+.flabel{
+margin-right: 10px;
+}
+
+.inputWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.centreWrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+
+}
+
+.subBtn{
+    width: 10vw;
+    border: none;
+    padding: 10px;
+    background-color: seagreen;
+    color: white;
+    cursor: pointer;
+    
+}
+
+.subBtn:hover{
+    background-color: mediumseagreen;
+}
+
+#detailsForm{
+   
+    padding: 20px;
+}
+
+.resetbtn{
+    width: 10vw;
+    border: none;
+    padding: 10px;
+    background-color: indianred;
+    color: white;
+    cursor: pointer;
+}
+
+#detailsForm2{
+    display: none;
+}
