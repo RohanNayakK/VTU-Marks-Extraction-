@@ -6,9 +6,6 @@ const { electron } = require('process');
 const { ipcMain } = require('electron')
 
 
-
-
-
 function createWindow () {
   // Create the browser window.
    const mainWindow = new BrowserWindow({
@@ -19,12 +16,20 @@ function createWindow () {
     }
   })
 
+
+
+  // and load the index.html of the app.
+  mainWindow.loadFile('index.html')
+  // mainWindow.maximize()
+
+
   function getPlaylist(name) {
     return new Promise((resolve , reject) => {
-        const childPython = spawn('python' ,['fetch.py', name]);
+        const childPython = spawn('python' ,['fetch.py', "4CB", "19", "CS", "1", "60"]);
         let result='';
         childPython.stdout.on(`data` , (data) => {
             result = data.toString();
+            console.log(result)
         });
     
         childPython.on('close' , function(code) {
@@ -38,35 +43,9 @@ function createWindow () {
 
     })
   };
-
-
-  // and load the index.html of the app.
-  mainWindow.loadFile('index.html')
-  // mainWindow.maximize()
-
-
+  
   ipcMain.on("callPython",async (event,data)=>{
-    console.log("backend call")
-    try{
-      let res = await getPlaylist("4CB19IS047")
-      console.log(res)
-    }
-    catch(err){
-      console.error(err)
-    }
-
-
-
-
-
-
-
-    // const python = spawn('python', ['demo.py']);
-    // python.stdout.on('data', function(data) {
-    //   console.log("Success")
-    //   console.log(data)
-    // })
-
+   let res = await getPlaylist()
   })
 
 

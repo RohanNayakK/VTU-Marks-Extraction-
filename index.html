@@ -31,6 +31,15 @@
             <label class="flabel" for="branch">Branch :</label>
             <input required placeholder="Enter branch code" name="branch" type="text" />
           </div>
+
+          <div class="inputWrapper">
+            <label class="flabel" for="startUSN">Starting USN :</label>
+            <input required placeholder="Enter first student USN" name="startUSN" type="text" />
+          </div>
+          <div class="inputWrapper">
+            <label class="flabel" for="endUSN">Ending USN :</label>
+            <input required placeholder="Enter last student USN" name="endUSN" type="text" />
+          </div>
   
         <div class="centreWrapper">
           <button type="reset" class="resetbtn">Reset</button>
@@ -45,8 +54,12 @@
           <div  class="inputWrapper">
             <label class="flabel">Available Result :</label>
            <select>
-             
+             <option>5th Sem Result</option>
            </select>
+          </div>
+          <div  class="inputWrapper">
+            <label class="flabel" for="folderPath">Path to save the excel file:</label>
+            <input type="text" placeholder="Enter path" id="folderPath" name="folderPath"/>
           </div>
 
         <div class="centreWrapper">
