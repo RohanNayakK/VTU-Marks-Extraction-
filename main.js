@@ -3,30 +3,71 @@ const {app, BrowserWindow} = require('electron')
 const path = require('path')
 const { spawn } = require('child_process');
 const { electron } = require('process');
+const { ipcMain } = require('electron')
 
 
 
-// const python = spawn('python', ['hello.py']);
-// python.stdout.on('data', function(data) {
-//   console.log("Success")
-//   console.log(data.toString())
-// });
 
 
 function createWindow () {
   // Create the browser window.
    const mainWindow = new BrowserWindow({
-    
-    width: 800,
-    height: 600,
+   
+
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
     }
   })
 
+  function getPlaylist(name) {
+    return new Promise((resolve , reject) => {
+        const childPython = spawn('python' ,['fetch.py', name]);
+        let result='';
+        childPython.stdout.on(`data` , (data) => {
+            result = data.toString();
+        });
+    
+        childPython.on('close' , function(code) {
+          
+            resolve(result)
+        });
+
+        childPython.on('error' , function(err){
+            reject(err)
+        });
+
+    })
+  };
+
+
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
-  mainWindow.maximize()
+  // mainWindow.maximize()
+
+
+  ipcMain.on("callPython",async (event,data)=>{
+    console.log("backend call")
+    try{
+      let res = await getPlaylist("4CB19IS047")
+      console.log(res)
+    }
+    catch(err){
+      console.error(err)
+    }
+
+
+
+
+
+
+
+    // const python = spawn('python', ['demo.py']);
+    // python.stdout.on('data', function(data) {
+    //   console.log("Success")
+    //   console.log(data)
+    // })
+
+  })
 
 
   // Open the DevTools.
@@ -57,3 +98,13 @@ app.on('window-all-closed', function () {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
+
+
+
+
+
+
+
+
+
+

@@ -1,7 +1,11 @@
+
 // All of the Node.js APIs are available in the preload process.
+
+const { ipcRenderer, contextBridge } = require("electron")
+
 // It has the same sandbox as a Chrome extension.
 window.addEventListener('DOMContentLoaded', () => {
-
+  console.log("Hello")
 
   const replaceText = (selector, text) => {
     const element = document.getElementById(selector)
@@ -13,3 +17,13 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 })
 
+let sendSubmit=(data)=>{
+  ipcRenderer.send("callPython",data)
+}
+
+let indexBridge={
+  sendSubmit :sendSubmit
+}
+
+
+contextBridge.exposeInMainWorld("Bridge",indexBridge)

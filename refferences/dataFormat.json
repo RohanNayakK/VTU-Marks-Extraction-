@@ -1,0 +1,290 @@
+[
+    {
+        "rv": false,
+        "_id": "5f4bd7bc85da7b501839e1f5",
+        "name": "ROHAN NAYAK K",
+        "usn": "4CB19IS047",
+        "semester": "1",
+        "collegeCode": "4CB",
+        "branchCode": "IS",
+        "batchYear": "19",
+        "resultMonthYear": "DECEMBER/JANUARY 2020",
+        "total": 598,
+        "searchedUser": "Scraped",
+        "timestamp": "2020-08-30T16:45:38.110Z",
+        "subjects": [
+            {
+                "total": 67,
+                "_id": "5f4bd7bc85da7b501839e1fd",
+                "subjectCode": "18MAT11",
+                "subjectName": "CALCULUS AND LINEAR ALGEBRA",
+                "iaMarks": 37,
+                "eMarks": 30,
+                "result": "P"
+            },
+            {
+                "total": 69,
+                "_id": "5f4bd7bc85da7b501839e1fc",
+                "subjectCode": "18PHY12",
+                "subjectName": "ENGINEERING PHYSICS",
+                "iaMarks": 30,
+                "eMarks": 39,
+                "result": "P"
+            },
+            {
+                "total": 56,
+                "_id": "5f4bd7bc85da7b501839e1fb",
+                "subjectCode": "18ELE13",
+                "subjectName": "BASIC ELECTRICAL ENGINEERING",
+                "iaMarks": 29,
+                "eMarks": 27,
+                "result": "P"
+            },
+            {
+                "total": 68,
+                "_id": "5f4bd7bc85da7b501839e1fa",
+                "subjectCode": "18CIV14",
+                "subjectName": "ELEMENTS OF CIVIL ENGINEERING AND MECHANICS",
+                "iaMarks": 36,
+                "eMarks": 32,
+                "result": "P"
+            },
+            {
+                "total": 84,
+                "_id": "5f4bd7bc85da7b501839e1f9",
+                "subjectCode": "18EGDL15",
+                "subjectName": "ENGINEERING GRAPHICS",
+                "iaMarks": 36,
+                "eMarks": 48,
+                "result": "P"
+            },
+            {
+                "total": 87,
+                "_id": "5f4bd7bc85da7b501839e1f8",
+                "subjectCode": "18PHYL16",
+                "subjectName": "ENGINEERING PHYSICS LABORATORY",
+                "iaMarks": 36,
+                "eMarks": 51,
+                "result": "P"
+            },
+            {
+                "total": 90,
+                "_id": "5f4bd7bc85da7b501839e1f7",
+                "subjectCode": "18ELEL17",
+                "subjectName": "BASIC ELECTRICAL ENGINEERING LABORATORY",
+                "iaMarks": 37,
+                "eMarks": 53,
+                "result": "P"
+            },
+            {
+                "total": 77,
+                "_id": "5f4bd7bc85da7b501839e1f6",
+                "subjectCode": "18EGH18",
+                "subjectName": "TECHNICAL ENGLISH-I",
+                "iaMarks": 30,
+                "eMarks": 47,
+                "result": "P"
+            }
+        ],
+        "status": "P",
+        "__v": 0
+    },
+    {
+        "_id": "60b4fc8cfa79a23e9f764eb3",
+        "resultMonthYear": "JANUARY/FEBRUARY/MARCH 2021",
+        "semester": "3",
+        "usn": "4CB19IS047",
+        "__v": 0,
+        "batchYear": "19",
+        "branchCode": "IS",
+        "collegeCode": "4CB",
+        "name": "ROHAN NAYAK K",
+        "rv": false,
+        "searchedUser": "VTU Connect Web",
+        "status": "Pass",
+        "subjects": [
+            {
+                "total": 66,
+                "_id": "60b4fc8cb2ed1260399b47d6",
+                "subjectCode": "18MAT31",
+                "subjectName": "TRANSFORM CALCULUS,FOURIER SERIES & NUM TECH",
+                "iaMarks": 31,
+                "eMarks": 35,
+                "result": "P"
+            },
+            {
+                "total": 87,
+                "_id": "60b4fc8cb2ed1260399b47d5",
+                "subjectCode": "18CS32",
+                "subjectName": "DATA STRUCTURES AND APPLICATIONS",
+                "iaMarks": 39,
+                "eMarks": 48,
+                "result": "P"
+            },
+            {
+                "total": 84,
+                "_id": "60b4fc8cb2ed1260399b47d4",
+                "subjectCode": "18CS33",
+                "subjectName": "ANALOG AND DIGITAL ELECTRONICS",
+                "iaMarks": 39,
+                "eMarks": 45,
+                "result": "P"
+            },
+            {
+                "total": 72,
+                "_id": "60b4fc8cb2ed1260399b47d3",
+                "subjectCode": "18CS34",
+                "subjectName": "COMPUTER ORGANIZATION",
+                "iaMarks": 39,
+                "eMarks": 33,
+                "result": "P"
+            },
+            {
+                "total": 75,
+                "_id": "60b4fc8cb2ed1260399b47d2",
+                "subjectCode": "18CS35",
+                "subjectName": "SOFTWARE ENGINEERING",
+                "iaMarks": 36,
+                "eMarks": 39,
+                "result": "P"
+            },
+            {
+                "total": 90,
+                "_id": "60b4fc8cb2ed1260399b47d1",
+                "subjectCode": "18CS36",
+                "subjectName": "DISCRETE MATHEMATICAL STRUCTURES",
+                "iaMarks": 38,
+                "eMarks": 52,
+                "result": "P"
+            },
+            {
+                "total": 95,
+                "_id": "60b4fc8cb2ed1260399b47d0",
+                "subjectCode": "18CSL37",
+                "subjectName": "ANALOG AND DIGITAL ELECTRONICS LABORATORY",
+                "iaMarks": 37,
+                "eMarks": 58,
+                "result": "P"
+            },
+            {
+                "total": 96,
+                "_id": "60b4fc8cb2ed1260399b47cf",
+                "subjectCode": "18CSL38",
+                "subjectName": "DATA STRUCTURES LABORATORY",
+                "iaMarks": 40,
+                "eMarks": 56,
+                "result": "P"
+            },
+            {
+                "total": 52,
+                "_id": "60b4fc8cb2ed1260399b47ce",
+                "subjectCode": "18KAK39",
+                "subjectName": "AADALITHA KANNADA",
+                "iaMarks": 52,
+                "eMarks": 0,
+                "result": "P"
+            }
+        ],
+        "total": 717,
+        "timestamp": "2022-06-13T17:51:07.718Z"
+    },
+    {
+        "_id": "6276887f028a82309e278040",
+        "resultMonthYear": "FEBRUARY/MARCH 2022",
+        "semester": "5",
+        "usn": "4CB19IS047",
+        "__v": 0,
+        "batchYear": "19",
+        "branchCode": "IS",
+        "collegeCode": "4CB",
+        "name": "ROHAN NAYAK K",
+        "rv": false,
+        "searchedUser": "4CB19IS017[Harsha Patel]",
+        "status": "Pass",
+        "subjects": [
+            {
+                "subjectCode": "18CS51",
+                "subjectName": "MANAGEMENT AND ENTREPRENEURSHIP FOR IT INDUSTRY",
+                "iaMarks": 36,
+                "eMarks": 48,
+                "total": 84,
+                "result": "P",
+                "_id": "6276887f028a82309e278037"
+            },
+            {
+                "subjectCode": "18CS52",
+                "subjectName": "COMPUTER NETWORKS AND SECURITY",
+                "iaMarks": 40,
+                "eMarks": 49,
+                "total": 89,
+                "result": "P",
+                "_id": "6276887f028a82309e278038"
+            },
+            {
+                "subjectCode": "18CS53",
+                "subjectName": "DATABASE MANAGEMENT SYSTEMS",
+                "iaMarks": 31,
+                "eMarks": 40,
+                "total": 71,
+                "result": "P",
+                "_id": "6276887f028a82309e278039"
+            },
+            {
+                "subjectCode": "18CS54",
+                "subjectName": "AUTOMATA THEORY AND COMPUTABILITY",
+                "iaMarks": 30,
+                "eMarks": 44,
+                "total": 74,
+                "result": "P",
+                "_id": "6276887f028a82309e27803a"
+            },
+            {
+                "subjectCode": "18CS55",
+                "subjectName": "APPLICATION DEVELOPMENT USING PYTHON",
+                "iaMarks": 35,
+                "eMarks": 54,
+                "total": 89,
+                "result": "P",
+                "_id": "6276887f028a82309e27803b"
+            },
+            {
+                "subjectCode": "18CS56",
+                "subjectName": "UNIX PROGRAMMING",
+                "iaMarks": 31,
+                "eMarks": 41,
+                "total": 72,
+                "result": "P",
+                "_id": "6276887f028a82309e27803c"
+            },
+            {
+                "subjectCode": "18CSL57",
+                "subjectName": "COMPUTER NETWORK LABORATORY",
+                "iaMarks": 39,
+                "eMarks": 47,
+                "total": 86,
+                "result": "P",
+                "_id": "6276887f028a82309e27803d"
+            },
+            {
+                "subjectCode": "18CSL58",
+                "subjectName": "DBMS LABORATORY WITH MINI PROJECT",
+                "iaMarks": 40,
+                "eMarks": 58,
+                "total": 98,
+                "result": "P",
+                "_id": "6276887f028a82309e27803e"
+            },
+            {
+                "subjectCode": "18CIV59",
+                "subjectName": "ENVIRONMENTAL STUDIES",
+                "iaMarks": 31,
+                "eMarks": 42,
+                "total": 73,
+                "result": "P",
+                "_id": "6276887f028a82309e27803f"
+            }
+        ],
+        "timestamp": "2022-05-07T14:55:59.317Z",
+        "total": 736
+    }
+]
