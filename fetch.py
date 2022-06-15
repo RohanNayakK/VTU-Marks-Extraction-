@@ -14,12 +14,13 @@ yearParam = sys.argv[2]
 branchParam = sys.argv[3]
 startUsnParam = sys.argv[4]
 endUsnParam = sys.argv[5]
+folderPathParam= sys.argv[6]
 
 # collegeCodeParam = "4CB"
 # yearParam = "19"
 # branchParam = "IS"
 # startUsnParam = "1"
-# endUsnParam = "60"
+# endUsnParam = "1"
 
 for i in range(int(startUsnParam), int(endUsnParam)+1):
     if(i < 10):
@@ -47,9 +48,10 @@ elif(todays_date.year == fourthyear):
     permittedSem.append(8)
 
 
-shutil.copy('ExcelFSTemplate.xlsx', 'D:/')
+shutil.copy('ExcelFSTemplate.xlsx', folderPathParam)
 
-wb_obj = openpyxl.load_workbook("D:/ExcelFSTemplate.xlsx")
+excelfile= folderPathParam+"ExcelFSTemplate.xlsx"
+wb_obj = openpyxl.load_workbook(excelfile)
 subcounter = 0
 
 print("Generating...")

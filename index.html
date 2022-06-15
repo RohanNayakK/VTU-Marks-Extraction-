@@ -24,32 +24,33 @@
 
           <div class="inputWrapper">
             <label class="flabel" for="year">Year :</label>
-            <input required placeholder="Enter year" name="year" type="number" />
+            <input id="syear" required placeholder="Enter year" name="year" type="text" />
           </div>
           
           <div class="inputWrapper">
             <label class="flabel" for="branch">Branch :</label>
-            <input required placeholder="Enter branch code" name="branch" type="text" />
+            <input id="sbranch" required placeholder="Enter branch code" name="branch" type="text" />
           </div>
 
           <div class="inputWrapper">
             <label class="flabel" for="startUSN">Starting USN :</label>
-            <input required placeholder="Enter first student USN" name="startUSN" type="text" />
+            <input id="sfusn" required placeholder="Enter first student USN" name="startUSN" type="text" />
           </div>
           <div class="inputWrapper">
             <label class="flabel" for="endUSN">Ending USN :</label>
-            <input required placeholder="Enter last student USN" name="endUSN" type="text" />
+            <input id="slusn" required placeholder="Enter last student USN" name="endUSN" type="text" />
           </div>
   
         <div class="centreWrapper">
           <button type="reset" class="resetbtn">Reset</button>
           <button class="subBtn">Submit</button>
+
         </div>
         </fieldset>
-     
+      </form>
 
-      
-        <fieldset id="detailsForm2">
+      <form  id="detailsForm2">
+        <fieldset>
           <legend >Select required exam</legend>
           <div  class="inputWrapper">
             <label class="flabel">Available Result :</label>
@@ -59,15 +60,21 @@
           </div>
           <div  class="inputWrapper">
             <label class="flabel" for="folderPath">Path to save the excel file:</label>
-            <input type="text" placeholder="Enter path" id="folderPath" name="folderPath"/>
+            <input required type="text" placeholder="Enter path" id="folderPath" name="folderPath"/>
           </div>
 
         <div class="centreWrapper">
           <button id="cancelBtn" class="resetbtn">Cancel</button>
-          <button class="subBtn">Generate Excel</button>
+          <button type="submit" class="subBtn">Generate Excel</button>
+        </div>
+
+        <div id="loadingContainer" class="centreWrapper">
+          <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+          <p>Generating please wait...</p>
         </div>
         </fieldset>
       </form>
+     
     </div>
 
     <script src="./renderer.js"></script>

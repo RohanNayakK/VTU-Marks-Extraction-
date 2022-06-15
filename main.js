@@ -16,16 +16,16 @@ function createWindow () {
     }
   })
 
-
+  mainWindow.maximize()
 
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
-  // mainWindow.maximize()
+ 
 
 
-  function getPlaylist(name) {
+  function fetchResult(dataObject) {
     return new Promise((resolve , reject) => {
-        const childPython = spawn('python' ,['fetch.py', "4CB", "19", "CS", "1", "60"]);
+        const childPython = spawn('python' ,['fetch.py', dataObject.collegeCode, dataObject.year, dataObject.branch, dataObject.startusn, dataObject.lastusn,dataObject.path]);
         let result='';
         childPython.stdout.on(`data` , (data) => {
             result = data.toString();
@@ -45,12 +45,10 @@ function createWindow () {
   };
   
   ipcMain.on("callPython",async (event,data)=>{
-   let res = await getPlaylist()
+  console.log(data)
+   let res = await fetchResult(data)
   })
 
-
-  // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
 }
 
 // This method will be called when Electron has finished

@@ -17,8 +17,8 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 })
 
-let sendSubmit=(data)=>{
-  ipcRenderer.send("callPython",data)
+let sendSubmit=(dataObj)=>{
+  ipcRenderer.send("callPython",dataObj)
 }
 
 let indexBridge={
