@@ -1,12 +1,12 @@
 {
-  "name": "electron-quick-start",
+  "name": "vtuResults2ExcelTool",
   "version": "1.0.0",
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+
   "keywords": [
     "Electron",
     "quick",

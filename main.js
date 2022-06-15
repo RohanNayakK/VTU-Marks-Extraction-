@@ -34,7 +34,7 @@ function createWindow () {
     
         childPython.on('close' , function(code) {
           
-            resolve(result)
+            resolve("200")
         });
 
         childPython.on('error' , function(err){
@@ -44,10 +44,22 @@ function createWindow () {
     })
   };
   
-  ipcMain.on("callPython",async (event,data)=>{
+  ipcMain.on("callPython", (event,data)=>{
   console.log(data)
-   let res = await fetchResult(data)
+   fetchResult(data)
+   .then((res)=>{
+    if(res==="200"){
+      let responseMsg ="Completed, Check the file in given path"
+      mainWindow.webContents.send('generationComplete', {
+        responseMsg : responseMsg
+      })
+    }})
+    .catch((err)=>{
+      console.error(err)
+    })
+
   })
+
 
 }
 

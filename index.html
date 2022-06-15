@@ -19,26 +19,26 @@
           <legend>Fill College/Class Details</legend>
           <div  class="inputWrapper">
             <label class="flabel" for="collegeCode">College Code :</label>
-            <input id="collegeCodeInput" required placeholder="Enter college code" name="collegeCode" type="text" maxlength="3" />
+            <input maxlength="3" id="collegeCodeInput" required placeholder="Enter college code" name="collegeCode" type="text"   />
           </div>
 
           <div class="inputWrapper">
             <label class="flabel" for="year">Year :</label>
-            <input id="syear" required placeholder="Enter year" name="year" type="text" />
+            <input maxlength="2"  id="syear" required placeholder="Enter year" name="year" type="number" />
           </div>
           
           <div class="inputWrapper">
             <label class="flabel" for="branch">Branch :</label>
-            <input id="sbranch" required placeholder="Enter branch code" name="branch" type="text" />
+            <input maxlength="3"  id="sbranch" required placeholder="Enter branch code" name="branch" type="text"   />
           </div>
 
           <div class="inputWrapper">
-            <label class="flabel" for="startUSN">Starting USN :</label>
-            <input id="sfusn" required placeholder="Enter first student USN" name="startUSN" type="text" />
+            <label class="flabel" for="startUSN">Starting USN:</label>
+            <input maxlength="3"  id="sfusn" required placeholder="Enter first student USN" name="startUSN" type="number" />
           </div>
           <div class="inputWrapper">
             <label class="flabel" for="endUSN">Ending USN :</label>
-            <input id="slusn" required placeholder="Enter last student USN" name="endUSN" type="text" />
+            <input maxlength="3" id="slusn" required placeholder="Enter last student USN" name="endUSN" type="number" />
           </div>
   
         <div class="centreWrapper">
@@ -49,8 +49,8 @@
         </fieldset>
       </form>
 
-      <form  id="detailsForm2">
-        <fieldset>
+      <form id="detailsForm2">
+        <fieldset id="detailsFormFieldSet2">
           <legend >Select required exam</legend>
           <div  class="inputWrapper">
             <label class="flabel">Available Result :</label>

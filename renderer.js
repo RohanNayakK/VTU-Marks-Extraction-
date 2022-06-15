@@ -4,6 +4,13 @@ let detailsForm2= document.getElementById('detailsForm2')
 let cancelBtn = document.getElementById("cancelBtn")
 let loader = document.getElementById("loadingContainer")
 
+const collegeCode=document.getElementById("collegeCodeInput")
+const year=document.getElementById("syear")
+const branch = document.getElementById("sbranch")
+const startusn= document.getElementById("sfusn")
+const lastusn = document.getElementById("slusn")
+const path =document.getElementById("folderPath")
+
 cancelBtn.addEventListener("click",()=>{
   window.location.reload();
 })
@@ -20,19 +27,14 @@ detailsForm.addEventListener("submit",(e)=>{
 detailsForm2.addEventListener("submit",(e)=>{
     e.preventDefault()
     loader.style.display ="flex"
-    let collegeCode=document.getElementById("collegeCodeInput")
-    let year=document.getElementById("syear")
-    let branch = document.getElementById("sbranch")
-    let startusn= document.getElementById("sfusn")
-    let lastusn = document.getElementById("slusn")
-    let path =document.getElementById("folderPath")
+    
 
     let formDataObj={
       collegeCode : collegeCode.value,
-      year:year.value,
+      year:String(year.value),
       branch:branch.value,
-      startusn:startusn.value,
-      lastusn:lastusn.value,
+      startusn:String(startusn.value),
+      lastusn:String(lastusn.value),
       path:path.value
     }
 
@@ -40,4 +42,10 @@ detailsForm2.addEventListener("submit",(e)=>{
   
 });
 
+collegeCode.addEventListener("input",(event)=>{
+  event.target.value = event.target.value.toUpperCase()
+})
 
+branch.addEventListener("input",(event)=>{
+  event.target.value = event.target.value.toUpperCase()
+})
