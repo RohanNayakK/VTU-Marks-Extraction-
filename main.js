@@ -5,7 +5,7 @@ const { spawn } = require('child_process');
 const { electron } = require('process');
 const { ipcMain } = require('electron')
 
-
+const { remote } = require('electron')
 function createWindow () {
   // Create the browser window.
    const mainWindow = new BrowserWindow({
@@ -44,9 +44,9 @@ function createWindow () {
   };
   
   ipcMain.on("callPython",async (event,data)=>{
-  console.log(data)
-  await fetchResult(data)
-  mainWindow.loadFile(path.join(__dirname, 'success.html'))
+    console.log(data)
+    await fetchResult(data)
+    mainWindow.loadFile(path.join(__dirname, 'success.html'))
   })
 
 

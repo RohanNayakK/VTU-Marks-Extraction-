@@ -13,7 +13,8 @@ const path =document.getElementById("folderPath")
 
 
 backBtn.addEventListener("click",()=>{
-  alert("Click")
+  detailsFormFieldSet.style.display = "block"
+  detailsForm2.style.display = "none"
 })
 
 
@@ -28,8 +29,6 @@ detailsForm.addEventListener("submit",(e)=>{
 detailsForm2.addEventListener("submit",(e)=>{
     e.preventDefault()
     loader.style.display ="flex"
-    
-
     let formDataObj={
       collegeCode : collegeCode.value,
       year:String(year.value),

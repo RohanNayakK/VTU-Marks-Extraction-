@@ -14,14 +14,14 @@ yearParam = sys.argv[2]
 branchParam = sys.argv[3]
 startUsnParam = sys.argv[4]
 endUsnParam = sys.argv[5]
-folderPathParam= sys.argv[6]
+folderPathParam = sys.argv[6]
 
 # collegeCodeParam = "4CB"
-# yearParam = "19"
+# yearParam = "20"
 # branchParam = "IS"
 # startUsnParam = "1"
-# endUsnParam = "1"
-
+# endUsnParam = "5"
+# folderPathParam = "D:/"
 for i in range(int(startUsnParam), int(endUsnParam)+1):
     if(i < 10):
         usnList.append(collegeCodeParam+yearParam+branchParam+"00"+str(i))
@@ -47,10 +47,11 @@ elif(todays_date.year == fourthyear):
     permittedSem.append(7)
     permittedSem.append(8)
 
+print(permittedSem)
 
 shutil.copy('ExcelFSTemplate.xlsx', folderPathParam)
 
-excelfile= folderPathParam+"ExcelFSTemplate.xlsx"
+excelfile = folderPathParam+"ExcelFSTemplate.xlsx"
 wb_obj = openpyxl.load_workbook(excelfile)
 subcounter = 0
 

@@ -25,7 +25,7 @@ body{
     height: 20vh; 
     align-items: center;
     justify-content: center;
-  
+  background-color:#222222;
 }
 
 
@@ -86,7 +86,7 @@ margin-right: 10px;
 
 #detailsForm{
    
-    padding: 20px;
+    padding: 40px;
 }
 
 .resetbtn{
@@ -193,6 +193,7 @@ margin-right: 10px;
     font-size: x-large;
     padding: 10px;
     border-radius: 10px;
+    margin-top: 10px;
   }
 
   .alertMessageError{
@@ -202,4 +203,12 @@ margin-right: 10px;
     font-size: medium;
     padding: 10px;
     text-align: center;
+  }
+
+  .twoNumTitle{
+    color: goldenrod;
+    font-weight: bold;
+  }
+  .appName{
+    margin-left: 5px;
   }

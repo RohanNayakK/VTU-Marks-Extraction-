@@ -8,7 +8,8 @@
   </head>
   <body>
     <div id="mainNav" class="navBar">
-      <p id="appName">VTU Results2Excel Tool</p>
+      <i class="fa-solid fa-graduation-cap"></i>
+      <span class="appName">VTU Results<span class="twoNumTitle">2</span>Excel Tool</span>
     </div>
     <div class="vtuNav">
       <img class="vtuLogoImg" alt="VTU" src="assets/vtuLogo.png" />
@@ -55,9 +56,6 @@
         </fieldset>
       </form>
       
-      <a href="./success.html">
-        <button>Test</button>
-        </a>
       <form id="detailsForm2">
         <fieldset id="detailsFormFieldSet2">
           <legend >Select required exam</legend>
@@ -72,9 +70,13 @@
             <input required type="text" placeholder="Enter path" id="folderPath" name="folderPath"/>
           </div>
 
-        <div class="centreWrapper">
-          <button id="backBtn" class="resetbtn">Cancel</button>
-          <button type="submit" class="subBtn">Generate Excel</button>
+        <div class="centreWrapper"> 
+          <button id="backBtn" class="resetbtn">
+            <i class="fa-solid fa-arrow-left-long"></i>
+            Back</button>
+          <button type="submit" class="subBtn">
+            <i class="fa-solid fa-file-excel"></i>
+            Generate Excel</button>
         </div>
 
         <div id="loadingContainer" class="centreWrapper">
