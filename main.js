@@ -33,7 +33,6 @@ function createWindow () {
         });
     
         childPython.on('close' , function(code) {
-          
             resolve("200")
         });
 
@@ -44,20 +43,10 @@ function createWindow () {
     })
   };
   
-  ipcMain.on("callPython", (event,data)=>{
+  ipcMain.on("callPython",async (event,data)=>{
   console.log(data)
-   fetchResult(data)
-   .then((res)=>{
-    if(res==="200"){
-      let responseMsg ="Completed, Check the file in given path"
-      mainWindow.webContents.send('generationComplete', {
-        responseMsg : responseMsg
-      })
-    }})
-    .catch((err)=>{
-      console.error(err)
-    })
-
+  await fetchResult(data)
+  mainWindow.loadFile(path.join(__dirname, 'success.html'))
   })
 
 

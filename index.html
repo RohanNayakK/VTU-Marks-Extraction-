@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="./styles.css" rel="stylesheet">
     <title>VTU Results2Excel Tool </title>
   </head>
@@ -10,9 +10,11 @@
     <div id="mainNav" class="navBar">
       <p id="appName">VTU Results2Excel Tool</p>
     </div>
+    <div class="vtuNav">
+      <img class="vtuLogoImg" alt="VTU" src="assets/vtuLogo.png" />
+    </div>
 
     <div class="MainContent">
-      <img alt="VTU" src="assets/vtuLogo.png" />
 
       <form id="detailsForm">
         <fieldset id="detailsFormFieldSet">
@@ -42,13 +44,20 @@
           </div>
   
         <div class="centreWrapper">
-          <button type="reset" class="resetbtn">Reset</button>
-          <button class="subBtn">Submit</button>
-
+          <button type="reset" class="resetbtn">
+            <i class="fa-solid fa-ban"></i>
+            Reset</button>
+          <button class="subBtn">
+            <i class="fa-solid fa-arrow-right-long"></i>
+            Submit</button>
+         
         </div>
         </fieldset>
       </form>
-
+      
+      <a href="./success.html">
+        <button>Test</button>
+        </a>
       <form id="detailsForm2">
         <fieldset id="detailsFormFieldSet2">
           <legend >Select required exam</legend>
@@ -64,7 +73,7 @@
           </div>
 
         <div class="centreWrapper">
-          <button id="cancelBtn" class="resetbtn">Cancel</button>
+          <button id="backBtn" class="resetbtn">Cancel</button>
           <button type="submit" class="subBtn">Generate Excel</button>
         </div>
 

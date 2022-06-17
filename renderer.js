@@ -1,7 +1,7 @@
 let detailsForm= document.getElementById('detailsForm')
 let detailsFormFieldSet= document.getElementById('detailsFormFieldSet')
 let detailsForm2= document.getElementById('detailsForm2')
-let cancelBtn = document.getElementById("cancelBtn")
+let backBtn = document.getElementById("backBtn")
 let loader = document.getElementById("loadingContainer")
 
 const collegeCode=document.getElementById("collegeCodeInput")
@@ -11,8 +11,9 @@ const startusn= document.getElementById("sfusn")
 const lastusn = document.getElementById("slusn")
 const path =document.getElementById("folderPath")
 
-cancelBtn.addEventListener("click",()=>{
-  window.location.reload();
+
+backBtn.addEventListener("click",()=>{
+  alert("Click")
 })
 
 
