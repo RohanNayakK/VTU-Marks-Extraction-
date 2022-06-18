@@ -1,22 +1,14 @@
 {
-  "name": "vtuResults2ExcelTool",
-  "version": "1.0.0",
-  "description": "A minimal Electron application",
-  "main": "main.js",
-  "scripts": {
-    "start": "electron ."
-  },
-
-  "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
-  ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
-  "devDependencies": {
-    "electron": "^19.0.4"
-  }
+	"name": "vtuResults2ExcelTool",
+	"author": "Rohan Nayak",
+	"version": "0.0.0",
+	"main": "main.js",
+	"dependencies": {
+		"@electron/remote": "^2.0.8",
+		"electron": "^18.2.0",
+		"xlsx": "https://cdn.sheetjs.com/xlsx-latest/xlsx-latest.tgz"
+	},
+	"scripts": {
+		"start": "electron ."
+	}
 }

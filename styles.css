@@ -46,6 +46,7 @@ body{
     align-items: center;
     color: white;
     gap:5vh;
+  
 
 }
 
@@ -74,14 +75,14 @@ margin-right: 10px;
     width: 10vw;
     border: none;
     padding: 10px;
-    background-color: seagreen;
+    background-color: mediumseagreen;
     color: white;
     cursor: pointer;
     
 }
 
 .subBtn:hover{
-    background-color: mediumseagreen;
+    background-color: seagreen;
 }
 
 #detailsForm{
@@ -96,6 +97,9 @@ margin-right: 10px;
     background-color: indianred;
     color: white;
     cursor: pointer;
+}
+.resetbtn:hover{
+  background-color: #842029;
 }
 
 #detailsForm2{
@@ -211,4 +215,53 @@ margin-right: 10px;
   }
   .appName{
     margin-left: 5px;
+  }
+
+
+  .readExcelBtn{
+    width: 10vw;
+    border: none;
+    padding: 10px;
+    background-color: cornflowerblue;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .readExcelBtn:hover{
+    background-color: steelblue;
+  }
+
+  #htmlout table{
+    width: 80vw;
+  }
+
+  #htmlout table, th, td {
+    border: 1px solid white;
+    text-align: center;
+  }
+
+  #htmlout table tr:first-child 
+   { background-color: skyblue; 
+    font-weight: bold;
+    font-size: large;
+  color: black;}
+
+  #htmlout table tr:nth-child(2){
+    background-color: lightcyan;
+    color: #222222;
+    font-size: large;
+    font-weight: bold;
+  }
+
+  #htmlout table tr:nth-child(3){
+    background-color:lightgoldenrodyellow;
+    color: #222222;
+    font-weight: bold;
+
+  }
+
+  #htmlout table tr:nth-child(4){
+    background-color: lightgrey;
+    color: #222222;
+    font-weight: bold;
   }

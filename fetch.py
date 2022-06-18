@@ -22,6 +22,7 @@ folderPathParam = sys.argv[6]
 # startUsnParam = "1"
 # endUsnParam = "5"
 # folderPathParam = "D:/"
+
 for i in range(int(startUsnParam), int(endUsnParam)+1):
     if(i < 10):
         usnList.append(collegeCodeParam+yearParam+branchParam+"00"+str(i))

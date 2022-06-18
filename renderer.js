@@ -49,3 +49,8 @@ collegeCode.addEventListener("input",(event)=>{
 branch.addEventListener("input",(event)=>{
   event.target.value = event.target.value.toUpperCase()
 })
+
+
+
+
+

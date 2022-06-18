@@ -4,26 +4,34 @@ const path = require('path')
 const { spawn } = require('child_process');
 const { electron } = require('process');
 const { ipcMain } = require('electron')
-
 const { remote } = require('electron')
+
+const XLSX = require('xlsx');
+
+const EXTENSIONS = "xls|xlsx|xlsm|xlsb|xml|csv|txt|dif|sylk|slk|prn|ods|fods|htm|html".split("|");
+let mainWindow
 function createWindow () {
   // Create the browser window.
-   const mainWindow = new BrowserWindow({
+    mainWindow= new BrowserWindow({
    
 
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js')
+      
+      preload: path.join(__dirname, 'preload.js'),
+      worldSafeExecuteJavaScript: true, 
+	  nodeIntegration: true,
+	  enableRemoteModule: true
     }
   })
 
-  mainWindow.maximize()
 
   // and load the index.html of the app.
-  mainWindow.loadFile('index.html')
- 
+  mainWindow.loadFile(path.join(__dirname, './views/index.html'))
+  mainWindow.maximize()
 
+}
 
-  function fetchResult(dataObject) {
+function fetchResult(dataObject) {
     return new Promise((resolve , reject) => {
         const childPython = spawn('python' ,['fetch.py', dataObject.collegeCode, dataObject.year, dataObject.branch, dataObject.startusn, dataObject.lastusn,dataObject.path]);
         let result='';
@@ -46,11 +54,10 @@ function createWindow () {
   ipcMain.on("callPython",async (event,data)=>{
     console.log(data)
     await fetchResult(data)
-    mainWindow.loadFile(path.join(__dirname, 'success.html'))
+    mainWindow.loadFile(path.join(__dirname, './views/success.html'))
   })
 
 
-}
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
@@ -71,6 +78,9 @@ app.whenReady().then(() => {
 app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') app.quit()
 })
+
+
+app.on('open-file', function () { console.log(arguments); });
 
 
 

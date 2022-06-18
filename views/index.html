@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="./styles.css" rel="stylesheet">
+    <link href="../styles.css" rel="stylesheet">
     <title>VTU Results2Excel Tool </title>
   </head>
   <body>
@@ -12,7 +12,7 @@
       <span class="appName">VTU Results<span class="twoNumTitle">2</span>Excel Tool</span>
     </div>
     <div class="vtuNav">
-      <img class="vtuLogoImg" alt="VTU" src="assets/vtuLogo.png" />
+      <img class="vtuLogoImg" alt="VTU" src="../assets/vtuLogo.png" />
     </div>
 
     <div class="MainContent">
@@ -46,8 +46,8 @@
   
         <div class="centreWrapper">
           <button type="reset" class="resetbtn">
-            <i class="fa-solid fa-ban"></i>
-            Reset</button>
+            <i class="fa-solid fa-arrow-rotate-right"></i>
+                        Reset</button>
           <button class="subBtn">
             <i class="fa-solid fa-arrow-right-long"></i>
             Submit</button>
@@ -55,6 +55,9 @@
         </div>
         </fieldset>
       </form>
+      <a href="./excelRead.html">
+        <button class="readExcelBtn">Test Read</button>
+      </a>
       
       <form id="detailsForm2">
         <fieldset id="detailsFormFieldSet2">
@@ -88,7 +91,8 @@
      
     </div>
 
-    <script src="./renderer.js"></script>
+    <script src="../renderer.js"></script>
+    
    
   </body>
 </html>
