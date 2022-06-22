@@ -15,7 +15,7 @@ branchParam = sys.argv[3]
 startUsnParam = sys.argv[4]
 endUsnParam = sys.argv[5]
 folderPathParam = sys.argv[6]
-resultSem=sys.argv[7]
+resultSem = sys.argv[7]
 
 # collegeCodeParam = "4CB"
 # yearParam = "20"
@@ -23,7 +23,7 @@ resultSem=sys.argv[7]
 # startUsnParam = "1"
 # endUsnParam = "5"
 # folderPathParam = "D:/"
-#resultSem=sys.argv[7]
+# resultSem=sys.argv[7]
 
 
 for i in range(int(startUsnParam), int(endUsnParam)+1):
@@ -33,7 +33,7 @@ for i in range(int(startUsnParam), int(endUsnParam)+1):
         usnList.append(collegeCodeParam+yearParam+branchParam+"0"+str(i))
     else:
         usnList.append(collegeCodeParam+yearParam+branchParam+str(i))
-    
+
 
 print(resultSem)
 
@@ -69,6 +69,7 @@ for sheet in wb_obj.sheetnames:
                     subNameCell.value = i["subjects"][subcounter]["subjectName"]
                     subCodeCell = sheet_obj.cell(row=3, column=3)
                     subCodeCell.value = i["subjects"][subcounter]["subjectCode"]
+                    sheet_obj.title = i["subjects"][subcounter]["subjectCode"]
                     firstTime = False
                 nameCell = sheet_obj.cell(row=rowCount, column=1)
                 usnCell = sheet_obj.cell(row=rowCount, column=2)

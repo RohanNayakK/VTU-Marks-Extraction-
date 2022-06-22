@@ -85,10 +85,7 @@ margin-right: 10px;
     background-color: seagreen;
 }
 
-#detailsForm{
-   
-    padding: 40px;
-}
+
 
 .resetbtn{
     width: 10vw;
@@ -207,6 +204,9 @@ margin-right: 10px;
     font-size: medium;
     padding: 10px;
     text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
   }
 
   .twoNumTitle{

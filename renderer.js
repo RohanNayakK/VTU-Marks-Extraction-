@@ -55,20 +55,32 @@ detailsForm.addEventListener("submit",(e)=>{
       return alert("Something went wrong")
     }
       
-  }).then((data)=>{
+  })
+  .then((data)=>{
     console.log(data)
-    for(let i=0;i<data.length;i++){
+    for(let i=0;i<data.length;i++)
+    {
       semArray.push(Number(data[i].semester))
     }
-    console.log(semArray)
-    console.log(Math.max(...semArray))
-    latestResult=Math.max(...semArray)
+    
+   
 
-  
+
+
     if(data.length==0){
-      alert("Invalid ")
+      let errorMessageForm1=document.getElementById("errorMessageForm1")
+      console.log(errorMessageForm1)
+      errorMessageForm1.classList.add("alertMessageError")
+      errorMessageForm1.innerHTML=`<i class="fa-solid fa-circle-exclamation"></i> Invalid Input`
+      setTimeout(()=>{
+        errorMessageForm1.innerText=""
+        errorMessageForm1.classList.remove("alertMessageError")
+      },1000)
+      return
+      
     }
     else{
+      latestResult=Math.max(...semArray)
       let availableResultElement=document.getElementById("availableResult")
       availableResultElement.innerText=latestResult+" Semester Result"
       detailsFormFieldSet.style.display = "none"
