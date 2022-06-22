@@ -33,7 +33,7 @@ function createWindow () {
 
 function fetchResult(dataObject) {
     return new Promise((resolve , reject) => {
-        const childPython = spawn('python' ,['fetch.py', dataObject.collegeCode, dataObject.year, dataObject.branch, dataObject.startusn, dataObject.lastusn,dataObject.path]);
+        const childPython = spawn('python' ,['fetch.py', dataObject.collegeCode, dataObject.year, dataObject.branch, dataObject.startusn, dataObject.lastusn,dataObject.path,String(dataObject.sem)]);
         let result='';
         childPython.stdout.on(`data` , (data) => {
             result = data.toString();

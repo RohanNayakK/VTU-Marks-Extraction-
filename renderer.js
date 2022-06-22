@@ -10,6 +10,7 @@ const branch = document.getElementById("sbranch")
 const startusn= document.getElementById("sfusn")
 const lastusn = document.getElementById("slusn")
 const path =document.getElementById("folderPath")
+let latestResult;
 
 
 backBtn.addEventListener("click",()=>{
@@ -21,8 +22,67 @@ backBtn.addEventListener("click",()=>{
 //start screen form
 detailsForm.addEventListener("submit",(e)=>{
   e.preventDefault()
-  detailsFormFieldSet.style.display = "none"
-  detailsForm2.style.display = "block" 
+  let baseURL="https://api.vtuconnect.in/result/"
+  let usn;
+  if(startusn.value < 10){
+     usn = collegeCode.value+year.value+String(branch.value)+"00"+String(startusn.value)
+
+  }
+  else if(startusn.value < 100){
+    usn = collegeCode.value+year.value+String(branch.value)+"0"+String(startusn.value)
+
+  }
+  else{
+    usn = collegeCode.value+year.value+String(branch.value)+String(startusn.value)
+
+  }
+  let url= baseURL+usn
+  let semArray=[]
+
+  fetch(url,{
+    headers:{
+    "Accept": "application/json",
+    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InNjb3BlIjpbInVzZXIiXSwiZW1haWwiOiJuYW5kYW5AZ21haWwuY29tIn0sImlhdCI6MTU0NzMxODI5N30.ZPO8tf03azhTJ1qmgSVyGV80k9EfomXgGazdLyUC6fw",
+    "Host": "api.vtuconnect.in",
+    }
+  
+  })
+  .then(response => {
+    if(response.status===200){
+      return response.json()
+    }
+    else{
+      return alert("Something went wrong")
+    }
+      
+  }).then((data)=>{
+    console.log(data)
+    for(let i=0;i<data.length;i++){
+      semArray.push(Number(data[i].semester))
+    }
+    console.log(semArray)
+    console.log(Math.max(...semArray))
+    latestResult=Math.max(...semArray)
+
+  
+    if(data.length==0){
+      alert("Invalid ")
+    }
+    else{
+      let availableResultElement=document.getElementById("availableResult")
+      availableResultElement.innerText=latestResult+" Semester Result"
+      detailsFormFieldSet.style.display = "none"
+      detailsForm2.style.display = "block" 
+    }
+    
+  })
+  .catch(error => {
+      alert("Something went wrong! Try Again")
+  });
+
+
+
+ 
 });
 
 
@@ -35,7 +95,8 @@ detailsForm2.addEventListener("submit",(e)=>{
       branch:branch.value,
       startusn:String(startusn.value),
       lastusn:String(lastusn.value),
-      path:path.value
+      path:path.value,
+      sem:latestResult
     }
 
     window.Bridge.sendSubmit(formDataObj)

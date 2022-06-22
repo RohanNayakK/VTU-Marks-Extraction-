@@ -15,6 +15,7 @@ branchParam = sys.argv[3]
 startUsnParam = sys.argv[4]
 endUsnParam = sys.argv[5]
 folderPathParam = sys.argv[6]
+resultSem=sys.argv[7]
 
 # collegeCodeParam = "4CB"
 # yearParam = "20"
@@ -22,6 +23,8 @@ folderPathParam = sys.argv[6]
 # startUsnParam = "1"
 # endUsnParam = "5"
 # folderPathParam = "D:/"
+#resultSem=sys.argv[7]
+
 
 for i in range(int(startUsnParam), int(endUsnParam)+1):
     if(i < 10):
@@ -30,25 +33,9 @@ for i in range(int(startUsnParam), int(endUsnParam)+1):
         usnList.append(collegeCodeParam+yearParam+branchParam+"0"+str(i))
     else:
         usnList.append(collegeCodeParam+yearParam+branchParam+str(i))
-    startyear = int("20"+yearParam)
-    firstyear = startyear+1
-    secondyear = startyear+2
-    thirdyear = startyear+3
-    fourthyear = startyear+4
-if(todays_date.year == firstyear):
-    permittedSem.append(1)
-    permittedSem.append(2)
-elif(todays_date.year == secondyear):
-    permittedSem.append(3)
-    permittedSem.append(4)
-elif(todays_date.year == thirdyear):
-    permittedSem.append(5)
-    permittedSem.append(6)
-elif(todays_date.year == fourthyear):
-    permittedSem.append(7)
-    permittedSem.append(8)
+    
 
-print(permittedSem)
+print(resultSem)
 
 shutil.copy('ExcelFSTemplate.xlsx', folderPathParam)
 
@@ -74,7 +61,7 @@ for sheet in wb_obj.sheetnames:
         data = r.json()
 
         for i in data:
-            if(int(i["resultMonthYear"].split()[1]) == todays_date.year and (i["semester"] == str(permittedSem[0]) or i["semester"] == str(permittedSem[1]))):
+            if(int(i["resultMonthYear"].split()[1]) == todays_date.year and (i["semester"] == resultSem)):
                 if(firstTime):
                     examNameCell = sheet_obj.cell(row=1, column=1)
                     examNameCell.value = i["resultMonthYear"]
