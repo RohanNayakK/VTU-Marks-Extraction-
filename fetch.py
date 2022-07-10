@@ -17,13 +17,13 @@ endUsnParam = sys.argv[5]
 folderPathParam = sys.argv[6]
 resultSem = sys.argv[7]
 
-# collegeCodeParam = "4CB"
-# yearParam = "20"
-# branchParam = "IS"
+# collegeCodeParam = "1SG"
+# yearParam = "19"
+# branchParam = "CS"
 # startUsnParam = "1"
 # endUsnParam = "5"
 # folderPathParam = "D:/"
-# resultSem=sys.argv[7]
+# resultSem = "5"
 
 
 for i in range(int(startUsnParam), int(endUsnParam)+1):
@@ -39,10 +39,10 @@ print(resultSem)
 
 shutil.copy('ExcelFSTemplate.xlsx', folderPathParam)
 
-excelfile = folderPathParam+"ExcelFSTemplate.xlsx"
+excelfile = folderPathParam+"/ExcelFSTemplate.xlsx"
 wb_obj = openpyxl.load_workbook(excelfile)
 subcounter = 0
-
+index = 0
 print("Generating...")
 for sheet in wb_obj.sheetnames:
     rowCount = 5
@@ -61,7 +61,12 @@ for sheet in wb_obj.sheetnames:
         data = r.json()
 
         for i in data:
-            if(int(i["resultMonthYear"].split()[1]) == todays_date.year and (i["semester"] == resultSem)):
+            tempArr = i["resultMonthYear"].split()
+            if(len(tempArr) == 2):
+                index = 1
+            else:
+                index = 2
+            if(int(i["resultMonthYear"].split()[index]) == todays_date.year) and (i["semester"] == resultSem and i["rv"] == False):
                 if(firstTime):
                     examNameCell = sheet_obj.cell(row=1, column=1)
                     examNameCell.value = i["resultMonthYear"]
@@ -75,6 +80,8 @@ for sheet in wb_obj.sheetnames:
                 usnCell = sheet_obj.cell(row=rowCount, column=2)
                 nameCell.value = i["name"]
                 usnCell.value = i["usn"]
+                if(subcounter == 1):
+                    print(i["subjects"][subcounter]["subjectName"])
                 iamarksCell = sheet_obj.cell(row=rowCount, column=3)
                 iamarksCell.value = i["subjects"][subcounter]["iaMarks"]
                 emarksCell = sheet_obj.cell(row=rowCount, column=4)
@@ -84,7 +91,7 @@ for sheet in wb_obj.sheetnames:
                 resultsCell = sheet_obj.cell(row=rowCount, column=6)
                 resultsCell.value = i["subjects"][subcounter]["result"]
                 rowCount = rowCount+1
-                wb_obj.save("D:/ExcelFSTemplate.xlsx")
+                wb_obj.save(excelfile)
     subcounter = subcounter+1
 
 print("Successfully Completed")
